@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Random Color</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src="https://kit.fontawesome.com/8f642f7f37.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="RandomColor.css">
+
+</head>
+<body>
+<div class="box">
+<h1>Random Color</h1>
+<div class="tshirt">
+<i class='fas fa-tshirt' style='font-size:80px'></i>
+
+</div>
+
+<div class="p-heart">
+<p id="hex"></p>    <button class="like" onclick="addColor()"><p><i class="fa-solid fa-heart"></i></p>
+</div>
+<button onclick="setRandomColor()" style='font-size:24px'> Change <i class='fas fa-tshirt'></i></button>
+<br>
+<h1>Favourite Colours</h1>
+<button class="removeAll" onclick="deleteAllTasks()">Delete All</button>
+<table id="taskTable">
+    <tr>
+        <th>Hex Codes</th>
+        <th>Action</th>
+    </tr>
+</table>
+
+</div>
+<script src="RandomColor.js"></script>
+</body>
+</html>

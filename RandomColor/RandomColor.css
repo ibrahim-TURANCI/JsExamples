@@ -1,0 +1,88 @@
+*{
+    text-align: center;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+h1{
+    margin: 5px;
+}
+button{
+    margin: 5px;
+}
+.tshirt{
+padding: 10px;
+border-radius: 5%;
+width: 40%;
+display: inline-block;
+text-shadow: 1px 1px 2px #0e0c14;
+}
+#hex{
+    font-size:  25px;
+    margin: 0;
+    padding-top: 4px;
+    text-shadow: 1px 1px 2px #0e0c14;
+}
+
+.fa-heart{
+    font-size: 25px;  
+    color: red;
+    cursor: pointer;
+}
+.box{
+    width: 60%;
+    background-color: #f5f5dc;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 5%;
+    margin-top: 3%;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+.like{
+    border-radius: 100%;
+    border: none;
+    background-color: #f5f5dc;
+}
+.like p{
+    margin: 0;
+  
+}
+.delete-btn{
+    cursor: pointer;
+    float: right;
+    margin:0px 5px;
+    border: 1px solid;
+    padding:3px;
+    border-radius: 5px;
+}
+.use-btn{
+    cursor: pointer;
+    margin:0px 5px;
+    font-family: Tahoma;
+    border: 1px solid;
+    padding:0px 3px;
+    border-radius: 5px;
+}
+.removeAll{
+    float: right;
+}
