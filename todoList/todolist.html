@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8f642f7f37.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="todolist.css"> 
+</head>
+
+<body>
+
+    <div class="title" id="div1">
+        <h2>Yapılacaklar Listesi</h2>
+    </div>
+    <div class="newTask">
+        <h4>Yeni Görev</h4>
+        <div class="newTask1">
+            <input type="text" id="taskInput" placeholder="Yeni görev girin">
+            <button onclick="addTask()"><i class="fa-solid fa-plus"></i></button>
+        </div>
+    </div>
+    <div class="görevlist">
+        <div class="görevlist1">
+            <h4> Görev Listesi</h4>
+            <button onclick="deleteAllTasks()">Temizle</button>
+        </div>
+        <ul id="taskList">
+           
+        </ul>
+    </div>
+
+    <script src="todolist.js"></script>
+</body>
+
+</html>

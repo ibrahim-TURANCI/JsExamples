@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+}
+.title {
+
+    margin-top: 5%;
+    margin-left: 2%;
+    border-top: 2px solid #000;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.newTask {
+    width: 75%;
+    /* height: 10vh; */
+    border: 1px solid rgb(185, 184, 184);
+    margin-top: 3%;
+    margin-left: 5%;
+    border-radius: 5px;
+
+}
+
+h4 {
+    background-color: #c4c2c2;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.newTask input {
+    width: 98%;
+    padding: 5px;
+    margin-left: 1%;
+    border: 1px solid rgb(185, 184, 184);
+    border-right: 0px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    
+
+}
+
+
+.newTask1 {
+    margin-top: -2px;
+    margin-bottom: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.newTask button {
+    background-color: #4494df;
+    border: 0;
+    padding: 8px;
+    margin-right: 12px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.görevlist {
+    width: 75%;
+    border: 1px solid rgb(185, 184, 184);
+    margin-top: 2%;
+    margin-left: 5%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.görevlist1 {
+    display: flex;
+    justify-content: space-between;
+    background-color: #c4c2c2;
+    height:30px;
+}
+
+.görevlist1 button {
+ height:25px;
+    width: 50px;
+    background-color: #fff;
+    border: 0.5px solid rgb(202, 126, 126);
+    color: rgb(202, 126, 126);
+    border-radius: 3px;
+    margin-top: 2px;
+    margin-right: 5px;
+    border-bottom: 1px solid rgb(202, 126, 126);
+}
+
+ul {
+    background-color: #c4c2c2;
+    list-style: none;
+
+}
+
+li {
+    padding-top: 7px;
+    padding-left: 5px;
+    border: 1px solid rgb(185, 184, 184);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+li button {
+    margin-top: -6px;
+    margin-right: 8px;
+    background-color: #c4c2c2;
+    border: 0;
+
+}
+        .delete-btn {
+            cursor: pointer;          
+            margin-left: 5px;
+        }
