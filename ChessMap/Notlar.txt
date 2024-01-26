@@ -1,0 +1,12 @@
+
+1.Ekranda bir satranç tahtasını temsil eden 64 karelik bir harita ve Haritanın alt üst kısmına stünlar için A B C D E F G H,
+haritanın sağına ve soluna satırlar için 1 2 3 4 5  6 7 8.
+Yeni map için bir buton
+boyanan kare sayısını anlık gösteren gösterge.
+
+2.Kenarlardan(a1,a2,a3,a4,a5,a6,a7,a8,b8,c8,d8,e8,f8,g8,h8,h7,h6,h5,h4,h3,h2,h1,g1,f1,e1,d1,c1,b1)
+ rastgele seçilmek şartıyla bir "S" ve "F" karesi (Sarı renk).
+
+3."S" den başlayıp sağ-sol-üst-alt kareden uygun olan kareyi sarıya boyayarak gösterge değeri bir 
+artmalı ve 20 milisaniye sonra boyanan karenin sağ-sol-üst-alt hizasındaki kareyi boyamalı, yine gösterge
+ bir artmalı "F" ye ulaşana kadar bu işlem devam etmeli. F ye ulaşınca yol yeşil olarak değişmeli.
