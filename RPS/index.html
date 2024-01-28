@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/8f642f7f37.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+  <div id="scoreboard">
+    <div class="score" id="user-score">You: 0</div>
+    <div class="score" id="computer-score">Computer: 0</div>
+  </div>
+
+  <div id="game-container">
+    <div id="user-choices">
+      <div class="choice" onclick="makeChoice('rock')" onmouseover="hoverChoice('rock')" onmouseout="unhoverChoice('rock')"><i class="fa-solid fa-hand-back-fist"></i></div>
+      <div class="choice" onclick="makeChoice('paper')" onmouseover="hoverChoice('paper')" onmouseout="unhoverChoice('paper')"><i class="fa-solid fa-hand"></i></div>
+      <div class="choice" onclick="makeChoice('scissors')" onmouseover="hoverChoice('scissors')" onmouseout="unhoverChoice('scissors')"><i class="fa-solid fa-hand-scissors"></i></div>
+    </div>
+
+    <div id="result">Choose an option</div>
+
+    <div id="computer-choice">?</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

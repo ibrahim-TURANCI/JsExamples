@@ -1,0 +1,55 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#scoreboard {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.score {
+  font-size: 1.5em;
+  margin: 10px;
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#user-choices {
+  display: flex;
+}
+
+.choice {
+  font-size: 2em;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.choice:hover {
+  transform: scale(1.2);
+}
+
+.choice.selected {
+  border: 1px solid blue;
+}
+
+#result {
+  font-size: 1.5em;
+  margin: 20px;
+}
+
+#computer-choice {
+  font-size: 2em;
+  margin: 20px;
+}
