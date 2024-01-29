@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Personel Table</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src="https://kit.fontawesome.com/8f642f7f37.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="personelTable.css">
+
+</head>
+<body>
+<div class="header"><img class="logo" src="https://ankageo.com/wp-content/uploads/2021/02/katman-2@2x.png" alt="AnkaGeo"></div>
+
+<div class="registerBox">
+    <div class="background1">
+        <img class="symbol1" src="/ankaSymbol.png" alt="AnkaGeo" width="300" height="300">
+        <img class="logo1" src="https://ankageo.com/wp-content/uploads/2021/02/katman-2@2x.png" alt="AnkaGeo">
+    <div class="registerTable">
+        <div class="registerRow"><p>ID</p><p id="generated-id"></p><button onclick="generateUserId()" class="black-b">ID Oluştur</button></div>
+        <div class="registerRow"><p>Ad</p> <input type="text" id="name" placeholder="Adınızı Giriniz. *" required></div>
+        <div class="registerRow"><p>Soyad</p> <input type="text" id="surname" placeholder="Soyadınızı Giriniz. *" required></div>
+        <div class="registerRow"><p>T.C.</p> <input type="text" id="tc" placeholder="TC Giriniz. *" maxlength="11" required></div>
+        <div class="registerRow"><p>Telefon</p> <input type="number" id="tel" placeholder="Telefon Giriniz."></div>
+        <div class="registerRow"><p>Lütfen '*' alanları eksiksiz şekilde doldurunuz</p><button class="black-b">Gönder</button> </div>
+    </div>
+    </div>
+    <div class="background2"><img class="symbol1" src="/ankaSymbol.png" alt="AnkaGeo" width="300" height="300">
+        <img class="logo1" src="/AnkageoWhite.png" alt="AnkaGeo">
+        <div class="registerTable">
+            <div class="registerRow"><p>ID</p>1000001<p></p></div>
+            <div class="registerRow"><p>Ad</p> <input type="text" id="name" required></div>
+            <div class="registerRow"><p>Soyad</p> <input type="text" id="surname" required></div>
+            <div class="registerRow"><p>T.C.</p> <input type="text" id="tc" minlength="11" maxlength="11"  required></div>
+            <div class="registerRow"><p>Telefon</p> <input type="number" id="tel" ></div>
+            <div class="registerRow"><button class="black-b">Düzenle</button> </div>
+        </div>
+    </div>
+</div>
+
+<div class="tableBox">
+    <p>DATABASE</p> 
+    <input type="text" placeholder="NO & ID">
+    <button class="black-b">Delete</button>
+    <button class="removeAll" onclick="deleteAllTasks()">Delete All</button>
+<table id="personelTable">
+    <tr>
+        <th>NO</th>
+        <th>ID</th>
+        <th>AD</th>
+        <th>SOYAD</th>
+        <th>TC</th>
+        <th>TELEFON</th>
+    </tr>
+</table>
+
+</div>
+<script src="personelTable.js"></script>
+</body>
+</html>
