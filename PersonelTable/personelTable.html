@@ -19,19 +19,19 @@
         <div class="registerRow"><p>Ad</p> <input type="text" id="name" placeholder="Adınızı Giriniz. *" required></div>
         <div class="registerRow"><p>Soyad</p> <input type="text" id="surname" placeholder="Soyadınızı Giriniz. *" required></div>
         <div class="registerRow"><p>T.C.</p> <input type="text" id="tc" placeholder="TC Giriniz. *" maxlength="11" required></div>
-        <div class="registerRow"><p>Telefon</p> <input type="number" id="tel" placeholder="Telefon Giriniz."></div>
-        <div class="registerRow"><p>Lütfen '*' alanları eksiksiz şekilde doldurunuz</p><button class="black-b">Gönder</button> </div>
+        <div class="registerRow"><p>Telefon</p> <input type="text" id="tel" placeholder="Telefon Giriniz."></div>
+        <div class="registerRow"><p>Lütfen '*' alanları eksiksiz şekilde doldurunuz</p><button class="black-b" onclick="addUser()">Gönder</button> </div>
     </div>
     </div>
     <div class="background2"><img class="symbol1" src="/ankaSymbol.png" alt="AnkaGeo" width="300" height="300">
         <img class="logo1" src="/AnkageoWhite.png" alt="AnkaGeo">
         <div class="registerTable">
-            <div class="registerRow"><p>ID</p>1000001<p></p></div>
-            <div class="registerRow"><p>Ad</p> <input type="text" id="name" required></div>
-            <div class="registerRow"><p>Soyad</p> <input type="text" id="surname" required></div>
-            <div class="registerRow"><p>T.C.</p> <input type="text" id="tc" minlength="11" maxlength="11"  required></div>
-            <div class="registerRow"><p>Telefon</p> <input type="number" id="tel" ></div>
-            <div class="registerRow"><button class="black-b">Düzenle</button> </div>
+            <div class="registerRow"><p>ID</p><p id="edit-id"></p></div>
+            <div class="registerRow"><p>Ad</p> <input type="text" id="edit-name" required></div>
+            <div class="registerRow"><p>Soyad</p> <input type="text" id="edit-surname" required></div>
+            <div class="registerRow"><p>T.C.</p> <input type="text" id="edit-tc" minlength="11" maxlength="11"  required></div>
+            <div class="registerRow"><p>Telefon</p> <input type="text" id="edit-tel" ></div>
+            <div class="registerRow"><button onclick="updateEditedUser()" class="black-b">Düzenle</button> </div>
         </div>
     </div>
 </div>
