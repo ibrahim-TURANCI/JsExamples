@@ -1,3 +1,5 @@
+const userArray = [];
+let maxNo = 0;
 const generatedId = generateRandomId();
 document.getElementById('generated-id').innerText = `${generatedId}`;
 function generateUserId() {
@@ -16,6 +18,7 @@ function generateRandomId() {
 
 
 function addUser() {
+  maxNo = maxNo + 1;
   // id ile input değerini alma
   var newNo = document.getElementById("generated-id");
   var newID = document.getElementById("generated-id");
@@ -47,65 +50,66 @@ function addUser() {
     var actionCell = newRow.insertCell(6);
 
     // Set task cell content
-    noCell.innerHTML = personelTable.rows.length - 1;
+    noCell.innerHTML = maxNo;//personelTable.rows.length - 1;
     idCell.innerHTML = newID.textContent;
     nameCell.innerHTML = nameValue;
     surnameCell.innerHTML = surnameValue;
     tcCell.innerHTML = tcValue;
     telCell.innerHTML = telValue;
 
+    userArray.push({
+      no: maxNo,//userArray.length + 1,
+      id: newID.textContent,
+      name: nameValue,
+      surname: surnameValue,
+      tc: tcValue,
+      tel: telValue
+    });
+    console.log(userArray);
 
-    var selectedRowIndex = -1;
+
     //  Düzenle butonu
     var organizeBtn = document.createElement("span");
+    organizeBtn.id = maxNo,
     organizeBtn.innerHTML = " <i></i> ";
-    organizeBtn.className = "fa-regular fa-pen-to-square";
-    organizeBtn.onclick = function editUser(row, index) {
-      selectedRowIndex = index;
+    organizeBtn.className = "edit-btn fa-regular fa-pen-to-square";
+    organizeBtn.onclick = function editUser(row) {
+     console.log("row :",row);
+      let element = userArray.find(el => el.no === Number(row.target.id))
+     console.log("element : ",  element);
+    
+      var idCell = element.id;
 
-      var idCell = row.cells[1].innerText;
-      var nameCell = row.cells[2].innerText;
-      var surnameCell = row.cells[3].innerText;
-      var tcCell = row.cells[4].innerText;
-      var telCell = row.cells[5].innerText;
-
-      document.getElementById("edit-id").value = idCell;
+      var nameCell = element.name;
+      var surnameCell = element.surname;
+      var tcCell = element.tc;
+      var telCell = element.tel;
+      
+      document.getElementById("edit-id").innerText = idCell;
       document.getElementById("edit-name").value = nameCell;
       document.getElementById("edit-surname").value = surnameCell;
       document.getElementById("edit-tc").value = tcCell;
       document.getElementById("edit-tel").value = telCell;
     };
     // Function to update the edited values
-    function updateEditedUser() {
-      var editedId = document.getElementById("edit-id").value;
-      var editedName = document.getElementById("edit-name").value;
-      var editedSurname = document.getElementById("edit-surname").value;
-      var editedTc = document.getElementById("edit-tc").value;
-      var editedTel = document.getElementById("edit-tel").value;
-
-      // Update the values in the selected row
-      var table = document.getElementById("personelTable");
-      var selectedRow = table.rows[selectedRowIndex]; // Ensure selectedRowIndex is set when clicking the edit button
-      selectedRow.cells[1].innerText = editedId;
-      selectedRow.cells[2].innerText = editedName;
-      selectedRow.cells[3].innerText = editedSurname;
-      selectedRow.cells[4].innerText = editedTc;
-      selectedRow.cells[5].innerText = editedTel;
-
-      // Clear the inputs in "background2"
-      document.getElementById("edit-id").value = "";
-      document.getElementById("edit-name").value = "";
-      document.getElementById("edit-surname").value = "";
-      document.getElementById("edit-tc").value = "";
-      document.getElementById("edit-tel").value = "";
-    };
+     
 
     // Create delete button
     var deleteBtn = document.createElement("span");
+    deleteBtn.id = maxNo, //userArray.length - 1;
     deleteBtn.innerHTML = " <i></i> ";
     deleteBtn.className = "delete-btn fa-solid fa-trash";
-    deleteBtn.onclick = function () {
+    deleteBtn.onclick = function (e) {
       deleteRow(newRow);
+
+      console.log("e: ",e);
+      
+      let index = userArray.findIndex(el => el.no === Number(e.target.id))
+     
+      userArray.splice(index,1)
+
+      console.log("userArray: ",userArray);
+
     };
 
     // Düzenle sil butonu hücreye ekleme
@@ -124,6 +128,36 @@ function addUser() {
     alert("Gerekli alanları doldurunuz");
   }
 }
+
+function updateEditedUser() {
+  var editedId = document.getElementById("edit-id").innerText;
+  var editedName = document.getElementById("edit-name").value;
+  var editedSurname = document.getElementById("edit-surname").value;
+  var editedTc = document.getElementById("edit-tc").value;
+  var editedTel = document.getElementById("edit-tel").value;
+
+  // Update the values in the selected row
+  var table = document.getElementById("personelTable");
+
+
+  const row = Array.from(table.rows).find(el => el.children[1].innerText === editedId);
+
+  console.log("row : ",row);
+
+  // var selectedRow = table.rows[selectedRowIndex]; // Ensure selectedRowIndex is set when clicking the edit button
+  // row.children[1].innerText = editedId;
+  row.children[2].innerText = editedName;
+  row.children[3].innerText = editedSurname;
+  row.children[4].innerText = editedTc;
+  row.children[5].innerText = editedTel;
+
+  // Clear the inputs in "background2"
+  document.getElementById("edit-id").value = "";
+  document.getElementById("edit-name").value = "";
+  document.getElementById("edit-surname").value = "";
+  document.getElementById("edit-tc").value = "";
+  document.getElementById("edit-tel").value = "";
+}; 
 
 function deleteRow(row) {
   var table = document.getElementById("personelTable");
