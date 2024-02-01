@@ -71,20 +71,19 @@ function addUser() {
     //  Düzenle butonu
     var organizeBtn = document.createElement("span");
     organizeBtn.id = maxNo,
-    organizeBtn.innerHTML = " <i></i> ";
+      organizeBtn.innerHTML = " <i></i> ";
     organizeBtn.className = "edit-btn fa-regular fa-pen-to-square";
     organizeBtn.onclick = function editUser(row) {
-     console.log("row :",row);
+      console.log("row :", row);
       let element = userArray.find(el => el.no === Number(row.target.id))
-     console.log("element : ",  element);
-    
-      var idCell = element.id;
+      console.log("element : ", element);
 
+      var idCell = element.id;
       var nameCell = element.name;
       var surnameCell = element.surname;
       var tcCell = element.tc;
       var telCell = element.tel;
-      
+
       document.getElementById("edit-id").innerText = idCell;
       document.getElementById("edit-name").value = nameCell;
       document.getElementById("edit-surname").value = surnameCell;
@@ -92,23 +91,23 @@ function addUser() {
       document.getElementById("edit-tel").value = telCell;
     };
     // Function to update the edited values
-     
+
 
     // Create delete button
     var deleteBtn = document.createElement("span");
     deleteBtn.id = maxNo, //userArray.length - 1;
-    deleteBtn.innerHTML = " <i></i> ";
-    deleteBtn.className = "delete-btn fa-solid fa-trash";
+      deleteBtn.innerHTML = " <i></i> ";
+    deleteBtn.className = "delete-btn fa-regular fa-trash-can";
     deleteBtn.onclick = function (e) {
       deleteRow(newRow);
 
-      console.log("e: ",e);
-      
-      let index = userArray.findIndex(el => el.no === Number(e.target.id))
-     
-      userArray.splice(index,1)
+      console.log("e: ", e);
 
-      console.log("userArray: ",userArray);
+      let index = userArray.findIndex(el => el.no === Number(e.target.id))
+
+      userArray.splice(index, 1)
+
+      console.log("userArray: ", userArray);
 
     };
 
@@ -142,7 +141,7 @@ function updateEditedUser() {
 
   const row = Array.from(table.rows).find(el => el.children[1].innerText === editedId);
 
-  console.log("row : ",row);
+  console.log("row : ", row);
 
   // var selectedRow = table.rows[selectedRowIndex]; // Ensure selectedRowIndex is set when clicking the edit button
   // row.children[1].innerText = editedId;
@@ -157,7 +156,7 @@ function updateEditedUser() {
   document.getElementById("edit-surname").value = "";
   document.getElementById("edit-tc").value = "";
   document.getElementById("edit-tel").value = "";
-}; 
+};
 
 function deleteRow(row) {
   var table = document.getElementById("personelTable");
