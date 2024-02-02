@@ -135,28 +135,39 @@ function updateEditedUser() {
   var editedTc = document.getElementById("edit-tc").value;
   var editedTel = document.getElementById("edit-tel").value;
 
-  // Update the values in the selected row
+  // Update the values in the corresponding row in the table
   var table = document.getElementById("personelTable");
+  var row = Array.from(table.rows).find(el => el.children[1].innerText === editedId);
 
+  if (row) {
+    row.children[2].innerText = editedName;
+    row.children[3].innerText = editedSurname;
+    row.children[4].innerText = editedTc;
+    row.children[5].innerText = editedTel;
+  }
 
-  const row = Array.from(table.rows).find(el => el.children[1].innerText === editedId);
+  // Update the corresponding entry in userArray
+  var selectedIndex = userArray.findIndex(user => user.id === editedId);
 
-  console.log("row : ", row);
-
-  // var selectedRow = table.rows[selectedRowIndex]; // Ensure selectedRowIndex is set when clicking the edit button
-  // row.children[1].innerText = editedId;
-  row.children[2].innerText = editedName;
-  row.children[3].innerText = editedSurname;
-  row.children[4].innerText = editedTc;
-  row.children[5].innerText = editedTel;
+  if (selectedIndex !== -1) {
+    // Update all fields except for 'id'
+    userArray[selectedIndex] = {
+      ...userArray[selectedIndex], // Copy existing properties
+      name: editedName,
+      surname: editedSurname,
+      tc: editedTc,
+      tel: editedTel
+    };
+  }
 
   // Clear the inputs in "background2"
-  document.getElementById("edit-id").value = "";
+  document.getElementById("edit-id").innerText = ""; // Assuming you want to clear the innerText
   document.getElementById("edit-name").value = "";
   document.getElementById("edit-surname").value = "";
   document.getElementById("edit-tc").value = "";
   document.getElementById("edit-tel").value = "";
-};
+}
+
 
 function deleteRow(row) {
   var table = document.getElementById("personelTable");

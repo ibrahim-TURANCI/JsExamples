@@ -53,7 +53,7 @@ body{
     border: none;
     text-align: left;
     padding:4px 8px;
-    font-size:14px;
+    font-size:12px;
 }
 .background1{
     background-color: rgb(211, 211, 211);
@@ -78,7 +78,7 @@ body{
 .symbol1{
     position: absolute;
     width: 50%;
-    height: auto;
+    height: 60%;
     left: 20px;
     top: 30px;
     
@@ -94,30 +94,35 @@ body{
     background-color: rgb(230, 60, 43);
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
+    height: 80px;
 }
 .tableBox{
     width: 94%; 
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
+    margin-top: 4%;
     padding: 20px;
 }
 #personelTable{
-    border: none;
+    border-collapse: collapse;
     width: 100%;
 }
 th, td {
-    border-bottom: 1px solid rgb(233, 231, 232);
+    border-bottom: 0px solid rgb(233, 231, 232);
     padding: 8px;
     text-align: left;
+    font-size: 14px;
+    
 }
 
 th {
-    background-color: #f2f2f2;
-    width: 250px;
-    border: none;
-}
+    background-color: rgb(233, 231, 232);
+    width: 14,3%;
 
+}
+tr:nth-child(n+1){
+    background-color:white;
+}
 tr:hover {
     background-color: #f5f5f5;
 }
@@ -129,9 +134,43 @@ tr:hover {
     border: none;
     cursor: pointer;
 }
+.removeAll{
+    cursor: pointer;
+    height: 30px;
+    background-color: rgb(94, 96, 95);
+    color: white;
+    margin-top: 8px;
+    padding:4px 2px;
+    font-size:12px;
+    border: solid 2px black;
+    float: inline-end;
+    margin-right: 20px;
+
+}
+#noDel{
+    margin-top: 8px;
+    width: 20%;
+    height: 30px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    text-align: left;
+    padding:4px 8px;
+
+    font-size:12px;
+    border: none;
+}
+.noDel{
+    background-color: black;
+    color: white;
+    padding: 4px 2px;
+    margin-top: 8px;
+    cursor: pointer;
+    height: 30px;
+    border: none;
+}
+
 .delete-btn{
     cursor: pointer;
- 
     margin:0px 5px;
     padding:3px;
     border-radius: 5px;
@@ -141,4 +180,22 @@ tr:hover {
     margin:0px 5px;
     padding:0px 3px;
     border-radius: 5px;
+}
+.tableTop > p{
+    float: left;
+    color: white;
+    padding: 8px 8px;
+    font-size: 14px;
+    font-family: system-ui;
+}
+.tableTop div{
+    display: flex;
+    justify-content: flex-end;
+}
+.delnote{
+    font-size: 10px;
+    color: white;
+    width: 99%;
+    text-align: right;
+    margin-right: 20px;
 }
