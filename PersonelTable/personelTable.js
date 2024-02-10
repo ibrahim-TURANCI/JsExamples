@@ -180,3 +180,30 @@ function deleteAllTasks() {
     table.deleteRow(1);  // ilk satır kalana kadar siler
   }
 }
+
+function deleteUser() {
+  var deleteId = document.getElementById("noDel").value;
+
+  // Find the index of the user with the specified ID in userArray
+  var deleteIndex = userArray.findIndex(user => user.id === deleteId);
+
+  if (deleteIndex !== -1) {
+    // Remove the user from userArray
+    userArray.splice(deleteIndex, 1);
+
+    // Remove the corresponding row from the table
+    var table = document.getElementById("personelTable");
+    var rowToDelete = Array.from(table.rows).find(el => el.children[1].innerText === deleteId);
+
+    if (rowToDelete) {
+      table.deleteRow(rowToDelete.rowIndex);
+    } else {
+      console.error("Row not found in the table.");
+    }
+  } else {
+    console.error("User not found in userArray.");
+  }
+
+  // Clear the input field
+  document.getElementById("noDel").value = "";
+}

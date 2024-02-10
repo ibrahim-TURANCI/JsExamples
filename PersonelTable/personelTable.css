@@ -8,7 +8,7 @@
 }
 body{
     background-color: rgb(179, 179, 179);
-
+    min-width: 750px;
 }
 .header{
     width: 100%;
@@ -83,7 +83,7 @@ body{
 .symbol1{
     position: absolute;
     width: 50%;
-    height: 60%;
+    height: auto;
     left: 20px;
     top: 30px;
     
