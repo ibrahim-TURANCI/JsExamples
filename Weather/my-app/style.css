@@ -10,3 +10,38 @@ html, body {
   bottom: 0;
   width: 100%;
 }
+#info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.weatherBox {  
+  color: white;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  padding: 2px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: auto;
+  font-weight: bold;
+  font-family: Tahoma;
+  background-color: rgba(236, 236, 205, 0.356);
+}
+.weatherBox p{
+  margin: 5px;
+  text-align: center;
+}
+.weatherBox i{
+  padding-right: 5px;
+}
+.weatherBox span{
+  color: rgb(3, 8, 24); 
+}
+.fa-location-dot{
+  color: crimson;
+}
