@@ -33,8 +33,11 @@ html, body {
   background-color: rgba(236, 236, 205, 0.356);
 }
 .weatherBox p{
-  margin: 5px;
+  margin: 2px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .weatherBox i{
   padding-right: 5px;
@@ -42,6 +45,17 @@ html, body {
 .weatherBox span{
   color: rgb(3, 8, 24); 
 }
+.weatherBox span:nth-child(3){
+font-size: 13px;
+padding-bottom: 12px;
+}
+.temp{
+ font-size: 25px;
+ padding-bottom: 6px;
+}
 .fa-location-dot{
   color: crimson;
+}
+.w-icon img{
+  width: 45px;
 }
