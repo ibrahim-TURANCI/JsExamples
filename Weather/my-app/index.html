@@ -10,16 +10,23 @@
 
     <div id="map"></div>
 
-    <div class="weatherBox">
+<!--     <div class="weatherBox">
       <p><i class="fa-solid fa-location-dot"></i><span class="location">Konum</span></p>
       <p><span class="w-icon"></span><span class="temp">Sıcaklık</span><span>°C</span></p>
-      </div>
+      </div> -->
 
 
       <div id="info">
         <span id="lat"></span>
         <span id="lon"></span>
       </div>
+
+      <div id="popup" class="ol-popup">
+        <p><span class="location"></span><span class="w-icon"></span><span class="temp"></span><span>°C</span></p>
+        <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+        <div id="popup-content"></div>
+      </div>
+
     <script src="https://kit.fontawesome.com/8f642f7f37.js" crossorigin="anonymous"></script>
     <script src="https://openlayers.org/en/v6.13.0/build/ol.js"></script>
     <script type="module" src="./main.js"></script>
